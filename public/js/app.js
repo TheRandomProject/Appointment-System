@@ -5261,20 +5261,32 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var buefy_dist_buefy_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! buefy/dist/buefy.css */ "./node_modules/buefy/dist/buefy.css");
 Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/fontawesome-free/css/all.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/routes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var buefy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! buefy */ "./node_modules/buefy/dist/esm/index.js");
-// styles
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'idle-vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+// Style
 
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
- // components
+ // Components
 
 
 
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'idle-vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
+  eventEmitter: app,
+  idleTime: 300000
+});
 vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(buefy__WEBPACK_IMPORTED_MODULE_3__["default"]);
-var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
-  el: '#app'
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
+  el: '#app',
+  router: Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/routes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
 });
 
 /***/ }),
