@@ -5261,10 +5261,10 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var buefy_dist_buefy_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! buefy/dist/buefy.css */ "./node_modules/buefy/dist/buefy.css");
 Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/fontawesome-free/css/all.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/routes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _components_routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/routes */ "./resources/js/components/routes.js");
 Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var buefy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! buefy */ "./node_modules/buefy/dist/esm/index.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var buefy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! buefy */ "./node_modules/buefy/dist/esm/index.js");
 Object(function webpackMissingModule() { var e = new Error("Cannot find module 'idle-vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 // Style
 
@@ -5278,15 +5278,15 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'idle-vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
+vue__WEBPACK_IMPORTED_MODULE_3__["default"].use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'idle-vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
   eventEmitter: app,
   idleTime: 300000
 });
-vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(buefy__WEBPACK_IMPORTED_MODULE_3__["default"]);
-vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
+vue__WEBPACK_IMPORTED_MODULE_3__["default"].use(buefy__WEBPACK_IMPORTED_MODULE_4__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_3__["default"].use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+new vue__WEBPACK_IMPORTED_MODULE_3__["default"]({
   el: '#app',
-  router: Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/routes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+  router: _components_routes__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 
 /***/ }),
@@ -5324,6 +5324,28 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/routes.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/routes.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
+var routes = [];
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-router'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({
+  routes: routes,
+  mode: 'history',
+  linkExactActiveClass: 'is-active'
+}));
 
 /***/ }),
 
