@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.0.0",
+        "@mdi/font": "^6.5.95",
         "@websanova/vue-auth": "^4.1.11",
         "buefy": "^0.9.19",
         "es6-promise": "^4.2.8",
