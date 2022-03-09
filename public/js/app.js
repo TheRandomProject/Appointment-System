@@ -5368,29 +5368,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5504,6 +5481,9 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [{
   path: '/dashboard',
   component: (__webpack_require__(/*! ./example/ExampleComponent.vue */ "./resources/js/components/example/ExampleComponent.vue")["default"])
+}, {
+  path: '/appointments',
+  component: (__webpack_require__(/*! ./page/appointment/index.vue */ "./resources/js/components/page/appointment/index.vue")["default"])
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   routes: routes,
@@ -49392,6 +49372,40 @@ component.options.__file = "resources/js/components/layouts/sidebar.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/page/appointment/index.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/components/page/appointment/index.vue ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/components/page/appointment/index.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/example/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************!*\
   !*** ./resources/js/components/example/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -49782,10 +49796,10 @@ var render = function () {
                 _vm._v(" "),
                 _c("b-menu-item", {
                   attrs: {
-                    icon: "information-outline",
-                    label: "Info",
+                    icon: "clipboard-check-multiple-outline",
+                    label: "Appointment",
                     tag: "router-link",
-                    to: "/test",
+                    to: "/appontment",
                   },
                 }),
                 _vm._v(" "),
@@ -49799,7 +49813,7 @@ var render = function () {
                         fn: function (props) {
                           return [
                             _vm._v(
-                              "\n                  Admin Tools\n                  "
+                              "\n                        Admin Tools\n                        "
                             ),
                             _c("b-icon", {
                               staticClass: "is-pulled-right",
@@ -49829,14 +49843,14 @@ var render = function () {
                 _c(
                   "b-menu-item",
                   {
-                    attrs: { icon: "hammer-wrench" },
+                    attrs: { icon: "chart-bubble" },
                     scopedSlots: _vm._u([
                       {
                         key: "label",
                         fn: function (report) {
                           return [
                             _vm._v(
-                              "\n                  Report\n                  "
+                              "\n                        Report\n                        "
                             ),
                             _c("b-icon", {
                               staticClass: "is-pulled-right",
@@ -49853,7 +49867,7 @@ var render = function () {
                     _vm._v(" "),
                     _c("b-menu-item", {
                       attrs: {
-                        icon: "shield-key-outline",
+                        icon: "inbox",
                         label: "User",
                         tag: "router-link",
                         to: "/#",
@@ -49862,7 +49876,7 @@ var render = function () {
                     _vm._v(" "),
                     _c("b-menu-item", {
                       attrs: {
-                        icon: "shield-key-outline",
+                        icon: "inbox",
                         label: "Appointment",
                         tag: "router-link",
                         to: "/#",
@@ -49871,7 +49885,7 @@ var render = function () {
                     _vm._v(" "),
                     _c("b-menu-item", {
                       attrs: {
-                        icon: "shield-key-outline",
+                        icon: "inbox",
                         label: "Password Reset",
                         tag: "router-link",
                         to: "/#",
@@ -49880,6 +49894,15 @@ var render = function () {
                   ],
                   1
                 ),
+                _vm._v(" "),
+                _c("b-menu-item", {
+                  attrs: {
+                    icon: "information",
+                    label: "Info",
+                    tag: "router-link",
+                    to: "/test",
+                  },
+                }),
               ],
               1
             ),
