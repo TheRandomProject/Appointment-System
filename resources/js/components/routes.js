@@ -2,8 +2,13 @@ import VueRouter from 'vue-router';
 
 let routes = [
     {
-        path: '/home',
+        path: '/dashboard',
         component: require('./example/ExampleComponent.vue').default
+    },
+    {
+        path: '/appointments',
+        component: require('./page/appointment/index.vue').default
+
     }
 ];
 

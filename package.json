@@ -11,6 +11,8 @@
     },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
+        "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+        "axios": "^0.21.4",
         "bootstrap": "^5.1.3",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
@@ -24,12 +26,13 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.0.0",
+        "@mdi/font": "^6.5.95",
         "@websanova/vue-auth": "^4.1.11",
         "buefy": "^0.9.19",
         "es6-promise": "^4.2.8",
         "idle-vue": "^2.0.5",
         "vue-axios": "^3.4.1",
         "vue-router": "^3.5.3",
-        "axios": "^0.21.4"
+        "vue-tabler-icons": "^1.12.1"
     }
 }
