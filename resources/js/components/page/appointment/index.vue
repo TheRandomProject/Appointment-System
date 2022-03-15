@@ -1,7 +1,6 @@
 <template>
   <div>
       <table-template>
-
       </table-template>
   </div>
 </template>

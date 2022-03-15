@@ -1,47 +1,83 @@
 <template>
-    <section>
+    <div class="box">
         <b-field grouped group-multiline>
-            <div v-for="(column, index) in columnsTemplate"
-                :key="index"
-                class="control">
-                <b-checkbox v-model="column.visible">
-                    {{ column.title }}
-                </b-checkbox>
-            </div>
+            <b-select v-model="perPage">
+                <option value="5">5 per page</option>
+                <option value="10">10 per page</option>
+                <option value="30">30 per page</option>
+                <option value="50">50 per page</option>
+                <option value="100">100 per page</option>
+            </b-select>
         </b-field>
-
-        <b-table :data="tableDataSimple">
-            <b-table-column v-for="(column, index) in columnsTemplate"
-                :key="index"
-                :label="column.title"
-                :visible="column.visible"
-                v-slot="props">
-                {{ props.row[column.field] }}
-            </b-table-column>
-        </b-table>
-    </section>
+        <b-table
+            :data="data"
+            :paginated="isPaginated"
+            :per-page="perPage"
+            :current-page.sync="currentPage"
+            :pagination-simple="isPaginationSimple"
+            :pagination-position="paginationPosition"
+            :pagination-order="paginationOrder"
+            :columns="columns"
+            :checked-rows.sync="checkedRows"
+            :checkbox-position="checkboxPosition"/>
+    </div>
 </template>
 
 <script>
-    export default {
-        data() {
-            const tableDataSimple = [
-                { 'id': 1, 'first_name': 'Jesse', 'last_name': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male' },
-                { 'id': 2, 'first_name': 'John', 'last_name': 'Jacobs', 'date': '2016-12-15 06:00:53', 'gender': 'Male' },
-                { 'id': 3, 'first_name': 'Tina', 'last_name': 'Gilbert', 'date': '2016-04-26 06:26:28', 'gender': 'Female' },
-                { 'id': 4, 'first_name': 'Clarence', 'last_name': 'Flores', 'date': '2016-04-10 10:28:46', 'gender': 'Male' },
-                { 'id': 5, 'first_name': 'Anne', 'last_name': 'Lee', 'date': '2016-12-06 14:38:38', 'gender': 'Female' }
-            ]
+const data = require('../example/sample.json');
 
+ export default {
+        data() {
             return {
-                tableDataSimple,
-                columnsTemplate: [
-                    { title: 'ID', field: 'id', visible: true },
-                    { title: 'First Name', field: 'first_name', visible: true },
-                    { title: 'Last Name', field: 'last_name', visible: true },
-                    { title: 'Date', field: 'date', visible: true },
-                    { title: 'Gender', field: 'gender', visible: true }
-                ]
+
+                data,
+
+                columns: [
+                    {
+                        field: 'id',
+                        label: 'ID',
+                        width: '40',
+                        numeric: true
+                    },
+                    {
+                        field: 'first_name',
+                        label: 'First Name',
+                    },
+                    {
+                        field: 'last_name',
+                        label: 'Last Name',
+                    },
+                    {
+                        field: 'date',
+                        label: 'Date',
+                        centered: true
+                    },
+                    {
+                        field: 'gender',
+                        label: 'Gender',
+                    }
+                ],
+
+                checkedRows: [],
+
+                isPaginated: true,
+                isPaginationSimple: false,
+                isPaginationRounded: false,
+                paginationPosition: 'bottom',
+                defaultSortDirection: 'asc',
+                paginationOrder: 'is-centered',
+                currentPage: 1,
+                perPage: 5,
+
+                // CheckBox
+                checkable: false,
+                checkboxPosition: 'left',
+
+                // MobileCard
+                hasMobileCards: true,
+
+                // Set this to true to show Empty State
+                isEmpty: false
             }
         }
     }
