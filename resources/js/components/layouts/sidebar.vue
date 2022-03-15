@@ -4,9 +4,9 @@
             <b-menu>
                 <b-menu-list label="Menu">
 
-                    <b-menu-item icon="view-dashboard" label="Dashboard" tag="router-link" to="/dashboard" />
+                    <b-menu-item icon="view-dashboard" label="Dashboard" tag="router-link" to="/" />
 
-                    <b-menu-item icon="clipboard-check-multiple-outline" label="Appointment" tag="router-link" to="/appontment" />
+                    <b-menu-item icon="clipboard-check-multiple-outline" label="Appointment" tag="router-link" to="/appointments" />
 
                     <b-menu-item icon="hammer-wrench">
 
